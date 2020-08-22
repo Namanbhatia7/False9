@@ -37,8 +37,8 @@ request(options, function(error, response, body) {
         console.log("SUCCESS");
     }
 
-    var loc = JSON.parse(body);
-    var names = loc.scorers;
+    var dataset = JSON.parse(body);
+    var names = dataset.scorers;
     console.log(names);
 })
 
