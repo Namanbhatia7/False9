@@ -16,6 +16,32 @@ app.post("/", function(req,res){
 
 var teamname = req.body.teamname;
 
+var options ={
+    url: "https://api.football-data.org/v2/competitions/SA/scorers",
+    method: "GET",
+    headers: {
+        "X-Auth-Token": "f24e3d3915fd4ee5a88568138ff0c652"
+    },
+
+    
+
+};
+
+request(options, function(error, response, body) {
+
+    if(error){
+        console.log("ERROR");
+    }
+    
+    else{
+        console.log("SUCCESS");
+    }
+
+    var loc = JSON.parse(body);
+    var names = loc.scorers;
+    console.log(names);
+})
+
 
 })
 
