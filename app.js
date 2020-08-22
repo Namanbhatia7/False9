@@ -14,8 +14,6 @@ app.get("/", function(req,res){
 
 app.post("/", function(req,res){
 
-var teamname = req.body.teamname;
-
 var options ={
     url: "https://api.football-data.org/v2/competitions/SA/scorers",
     method: "GET",
