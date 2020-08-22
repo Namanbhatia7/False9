@@ -7,7 +7,8 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req,res){
-    res.send("Initaializing app.js");
+    res.sendFile(`${__dirname}/index.html`);
+    console.log(__dirname);
 });
 
 app.listen(3000, function(){
