@@ -36,8 +36,8 @@ request(options, function(error, response, body) {
     }
 
     var dataset = JSON.parse(body);
-    var names = dataset.scorers;               
-    console.log(names);                         //Display names of Serie A top scorers
+    var names = dataset.scorers[0].player.name;    //Display the Top Scorer of Serie A
+    res.send(names);
 })
 
 
