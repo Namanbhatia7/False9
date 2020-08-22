@@ -9,8 +9,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req,res){
     res.sendFile(`${__dirname}/index.html`);
-    console.log(__dirname);
+    
 });
+
+app.post("/", function(req,res){
+
+var teamname = req.body.teamname;
+
+
+})
 
 app.listen(3000, function(){
     console.log("Server is Running on Port 3000");
