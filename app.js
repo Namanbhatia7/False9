@@ -15,7 +15,7 @@ app.get("/", (req,res) => {
     
 });
 
-app.post("/", function(req,res){
+app.get("/competitions", function(req,res){
 
 var options ={
     url: "https://api.football-data.org/v2/competitions/",
@@ -38,19 +38,22 @@ request(options, function(error, response, body) {
 
     var dataset = JSON.parse(body);
     var allData = dataset.count;
-    res.setHeader("Content-Type", "text/html");
+    // var names = [];
+    
 
-    for(let i=0; i<allData; i++){
+    // for(let i=0; i<allData; i++){
 
-        if(dataset.competitions[i].plan === "TIER_ONE"){
-        var names = dataset.competitions[i].name;    //Display the Top Scorer of Serie A
-        console.log(names);
-        res.write("<h3>" + names + "</h3>");
+        // if(dataset.competitions[i].plan === "TIER_ONE"){
+        // names[i] = dataset.competitions[i].name;    
+        
+        res.render("competitions",{ 
+            noOfComp: allData,
+            displayData: dataset
+        });
              
-        }
-    }
+        // }
+    // }
 
-    res.send();
     
 })
 
