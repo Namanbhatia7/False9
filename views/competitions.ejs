@@ -10,7 +10,7 @@
    <% for(let i=0; i<noOfComp; i++){ %>
    <%    if(displayData.competitions[i].plan === "TIER_ONE"){ %>
 
-           <p> <%= displayData.competitions[i].name %> </p>
+           <a href="competitions/<%= displayData.competitions[i].code %>" role="button" id=" <%= displayData.competitions[i].code %> " ><br> <%= displayData.competitions[i].name %> </a>
         <% } %>
   <% } %>
 </body>
