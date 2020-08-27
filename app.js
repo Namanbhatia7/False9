@@ -15,13 +15,14 @@ app.get("/", (req,res) => {
     
 });
 
-app.get("/competitions", function(req,res){
+var apiKey = 'f24e3d3915fd4ee5a88568138ff0c652';
+app.get("/competitions", function(req,res,){
 
 var options ={
     url: "https://api.football-data.org/v2/competitions/",
     method: "GET",
     headers: {
-        "X-Auth-Token": "f24e3d3915fd4ee5a88568138ff0c652"
+        "X-Auth-Token": apiKey
     },   
 
 };
@@ -38,6 +39,7 @@ request(options, function(error, response, body) {
 
     var dataset = JSON.parse(body);
     var allData = dataset.count;
+    // console.log(dataset);
     // var names = [];
     
 
@@ -56,6 +58,36 @@ request(options, function(error, response, body) {
 
     
 })
+
+
+})
+
+app.get('/competitions/:name', (req,res) =>{
+
+    let leaguecode = req.params.name;
+    
+    var options ={
+        url: "https://api.football-data.org/v2/competitions/" + leaguecode +'/teams' ,
+        method: "GET",
+        headers: {
+            "X-Auth-Token": apiKey
+        },   
+    
+    };
+
+    request(options, function(error, response, body){
+
+        var leagueData = JSON.parse(body);
+        var allData = leagueData.count;
+
+        res.render("teams",{ 
+            no: allData,
+            disData: leagueData
+        });
+
+
+    })
+
 
 })
 
