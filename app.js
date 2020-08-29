@@ -39,33 +39,61 @@ request(options, function(error, response, body) {
 
     var dataset = JSON.parse(body);
     var allData = dataset.count;
-    // console.log(dataset);
-    // var names = [];
-    
-
-    // for(let i=0; i<allData; i++){
-
-        // if(dataset.competitions[i].plan === "TIER_ONE"){
-        // names[i] = dataset.competitions[i].name;    
-        
+           
         res.render("competitions",{ 
             noOfComp: allData,
             displayData: dataset
         });
-             
-        // }
-    // }
+                
+})
 
+
+})
+
+app.get("/competitions/:name", function(req,res,){
+
+    var leaguecode = req.params.name
+
+    var options ={
+        url: "https://api.football-data.org/v2/competitions/" + leaguecode,
+        method: "GET",
+        headers: {
+            "X-Auth-Token": apiKey
+        },   
     
-})
+    };
+    
+    request(options, function(error, response, body) {
+    
+        if(error){
+            console.log("ERROR");
+        }
+        
+        else{
+            console.log("SUCCESS");
+        }
+    
+        var dataset = JSON.parse(body);
+        var seasons = dataset.seasons;
 
+        var noOfSeasons = Object.keys(seasons).length;
+        console.log(noOfSeasons);
+               
+            res.render("particularcompetition",{
+                displayData: dataset,
+                seasonCount: noOfSeasons
 
-})
+            });
+                    
+    })
+    
+    
+    })
 
-app.get('/competitions/:name', (req,res) =>{
+app.get('/competitions/:name/teams', (req,res) =>{
 
     let leaguecode = req.params.name;
-    
+    console.log(req.query)
     var options ={
         url: "https://api.football-data.org/v2/competitions/" + leaguecode +'/teams' ,
         method: "GET",
