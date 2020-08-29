@@ -10,7 +10,7 @@
    <% for(let i=0; i<no; i++){ %>
    <%    if(disData.competition.plan === "TIER_ONE"){ %>
 
-           <a href="teams/<%= disData.teams[i].tla %>" role="button" id=" <%= disData.teams[i].tla %> " ><br> <%= disData.teams[i].name %> </a>
+           <a href="<%= disData.teams[i].name %>/<%= disData.teams[i].tla %>" role="button" id=" <%= disData.teams[i].tla %> " ><br> <%= disData.teams[i].name %> </a>
         <% } %>
   <% } %>
 </body>
