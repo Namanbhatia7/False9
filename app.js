@@ -119,6 +119,38 @@ app.get('/competitions/:name/teams', (req,res) =>{
 
 })
 
+app.get('/competitions/:name/standings', (req,res) =>{
+
+    let leaguecode = req.params.name;
+    var options ={
+        url: "https://api.football-data.org/v2/competitions/" + leaguecode +'/standings' ,
+        method: "GET",
+        headers: {
+            "X-Auth-Token": apiKey
+        },   
+    
+    };
+
+    request(options, function(error, response, body){
+
+        var standingsData = JSON.parse(body);
+        var standingCount = standingsData.standings[0].table;
+
+        var noOfteams = Object.keys(standingCount).length;
+
+        console.log(noOfteams);
+
+        res.render("standings",{ 
+            totalTeams: noOfteams,
+            displayData: standingsData
+        });
+
+
+    })
+
+
+})
+
 app.listen(3000, function(){
     console.log("Server is Running on Port 3000");
 
