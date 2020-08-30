@@ -7,11 +7,36 @@
 </head>
 <body>
 
-   <% for(let i=0; i<no; i++){ %>
-   <%    if(disData.competition.plan === "TIER_ONE"){ %>
+  <table>
+    <thead>
+      <tr>
+        <th>Teams</th>
+        <th>P</th>
+        <th>W</th>
+        <th>D</th>
+        <th>L</th>
+        <th>GF</th>
+        <th>GA</th>
+        <th>GD</th>
+        <th>Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i=0;i<totalTeams;i++){ %>
+                 <tr>
+                   <td><%= displayData.standings[0].table[i].team.name %></td>
+                   <td><%= displayData.standings[0].table[i].playedGames %></td>
+                   <td><%= displayData.standings[0].table[i].won %></td>
+                   <td><%= displayData.standings[0].table[i].draw %></td>
+                   <td><%= displayData.standings[0].table[i].lost %></td>
+                   <td><%= displayData.standings[0].table[i].goalsFor %></td>
+                   <td><%= displayData.standings[0].table[i].goalsAgainst %></td>
+                   <td><%= displayData.standings[0].table[i].goalDifference %></td>
+                   <td><%= displayData.standings[0].table[i].points %></td>
+                 </tr>
 
-           <a href="<%= disData.teams[i].name %>/<%= disData.teams[i].tla %>" role="button" id=" <%= disData.teams[i].tla %> " ><br> <%= disData.teams[i].name %> </a>
-        <% } %>
-  <% } %>
+      <% } %>
+    </tbody>
+
 </body>
 </html>
