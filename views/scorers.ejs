@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Scorers</title>
+</head>
+<body>
+    
+    <% for(let i=0; i<topScorers; i++){ %>
+        <div>
+            <p><%= displayData.scorers[i].player.name %></p>
+            <p><%= displayData.scorers[i].team.name %></p>
+            <p><%= displayData.scorers[i].numberOfGoals %></p>
+        </div>
+                     
+     <% } %>
+
+
+</body>
+</html>
