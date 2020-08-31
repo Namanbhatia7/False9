@@ -151,6 +151,35 @@ app.get('/competitions/:name/standings', (req,res) =>{
 
 })
 
+app.get('/competitions/:name/scorers', (req,res) =>{
+
+    let leaguecode = req.params.name;
+    console.log(req.query)
+    var options ={
+        url: "https://api.football-data.org/v2/competitions/" + leaguecode +'/scorers' ,
+        method: "GET",
+        headers: {
+            "X-Auth-Token": apiKey
+        },   
+    
+    };
+
+    request(options, function(error, response, body){
+
+        var scorersData = JSON.parse(body);
+        var count = scorersData.count;
+
+        res.render("scorers",{ 
+            topScorers: count,
+            displayData: scorersData
+        });
+
+
+    })
+
+
+})
+
 app.listen(3000, function(){
     console.log("Server is Running on Port 3000");
 
