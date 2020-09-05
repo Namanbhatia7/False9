@@ -4,6 +4,47 @@
     background: -webkit-linear-gradient(top, #69ADA5, #28ADA7);
     background: -moz-linear-gradient(top, #69ADA5, #28ADA7);
     background: linear-gradient(to bottom, #69ADA5, #28ADA7);
+    height: 61px;
+    
+}
 
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255 255 255);
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+ 
+}
 
+.navbar-light .navbar-brand {
+    color: rgb(255 255 255);
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    
+}
+
+/* Competitions */
+
+.col-sm-4 {
+    margin-block-end: 2rem;
+    margin-block-start: 2rem;
+    text-align: center;
+    padding-left: 4rem;
+    
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #58c5b9;
+    border-color: #b1d6d2;
+}
+
+.card.w-50 {
+    border: solid 1px #0da594;
+    left: 3rem;
+    -webkit-box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
+    box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
+    border-radius: 20px;
 }
