@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head')-%>
     <title>Document</title>
 </head>
 <body>
+    <%- include('partials/navbar')-%>
+     
+    <div>
+        <p class="leagueName"><%= displayData.name %></p>
 
-    <h1><%= displayData.name %></h1>
+    </div>
+    
     <p>Area: <%= displayData.area.name %></p><br>
     
 
