@@ -3,7 +3,9 @@
     background: #69ADA5;
     background: -webkit-linear-gradient(top, #69ADA5, #28ADA7);
     background: -moz-linear-gradient(top, #69ADA5, #28ADA7);
-    background: linear-gradient(to bottom, #69ADA5, #28ADA7);
+    /* background: linear-gradient(to bottom, #69ADA5, #28ADA7); */
+    /* background: linear-gradient(to bottom, #151716, #4c4a4ac2);      */
+        background: #020202db;
     height: 61px;
     
 }
@@ -36,8 +38,9 @@
 
 .btn-primary {
     color: #fff;
-    background-color: #58c5b9;
-    border-color: #b1d6d2;
+    background-color: #5de4d5;
+    border-color: #13c1ae;
+    border-radius: 15px 15px 15px 0;
 }
 
 .card.w-50 {
@@ -46,5 +49,41 @@
     -webkit-box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
     -moz-box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
     box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
-    border-radius: 20px;
+    border-radius: 27px 27px 27px 0;
+}
+
+.container-fluid.heading {
+        padding: 15px;
+        margin-top: 46px;
+        padding-left: 0;  
+}
+
+h2.section-heading {
+    width: 547px;
+    clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0% 100%, 0 49%, 0% 0%);
+    background: #49ded7;
+    padding: 11px;
+    padding-left: 28px;
+    margin-left: 0;
+}
+
+.clipped {
+    width: 558px;
+    height: 62px;
+    clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0% 100%, 0 49%, 0% 0%);
+    background: #8fffd9;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid.heading {
+    padding: 0;
+    margin-top: 0;
+    padding-left: 0;
 }
