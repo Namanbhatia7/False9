@@ -7,26 +7,35 @@
 <body>
     <%- include('partials/navbar')-%>
      
-    <div>
-        <p class="leagueName"><%= displayData.name %></p>
 
-    </div>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle leagueButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- <img src="/img/LeaguePage/footballGround.jpg" alt=""> -->
+            <div class="leagueConatiner">
+                <p class="leagueName"><%= displayData.name %></p>
+                <p>Area: <%= displayData.area.name %></p><br>
+        </div>
+
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="/<%= displayData.code %>/teams">All Teams</a>
+          <a class="dropdown-item" href="/<%= displayData.code %>/standings">Standings</a>
+          <a class="dropdown-item" href="/<%= displayData.code %>/scorers">Top Scorers</a>
+        </div>
+      </div>
+
     
-    <p>Area: <%= displayData.area.name %></p><br>
+    
     
 
-    <ol>
+    <!-- <ol>
         <% for(let i=0;i<seasonCount;i++){ %>
             <li><%= displayData.seasons[i].startDate %> - <%= displayData.seasons[i].endDate %></li>
 
        <% } %>
 
-    </ol>
+    </ol> -->
 
-
-    <a role="button" href="<%= displayData.code %>/teams">All Teams</a>
-    <a role="button" href="<%= displayData.code %>/standings">Standings</a>
-    <a role="button" href="<%= displayData.code %>/scorers">Top Scorers</a>
 
 </body>
 </html>
