@@ -1,3 +1,8 @@
+body{
+    font-family: 'Lato', sans-serif;
+
+}
+
 .navbar{
 
     background: #69ADA5;
@@ -38,14 +43,14 @@
 
 .btn-primary {
     color: #fff;
-    background-color: #5de4d5;
-    border-color: #13c1ae;
+    background-color: #484848;
+    border: solid 2.5px #e44d2e;
     border-radius: 15px 15px 15px 0;
 }
 
 .card.w-50 {
-    border: solid 1px #0da594;
-    left: 3rem;
+    border: solid 2px #000000;
+    left: 4rem;
     -webkit-box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
     -moz-box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
     box-shadow: -10px 8px 16px -18px rgba(0,0,0,0.75);
@@ -86,4 +91,44 @@ h2.section-heading {
     padding: 0;
     margin-top: 0;
     padding-left: 0;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* SlideShow */
+
+.carousel-caption.d-none.d-md-block {
+    background: #08080847;
+}
+
+/* Skewed Background */
+
+.container-fluid.comp-info {
+    background: #fdfdfd;
+    min-height: 300px;
+    width: 100%; 
+    position: relative;  
+}
+
+.container-fluid.comp-cards {
+    
+    width: 100%;
+    background: #E44D2E;
+    position: relative;
+    
+    
+}
+
+p.Comp-para {
+    text-align: center;
+    font-size: 2rem;
+    padding: 101px;
+    font-weight: 600;
 }
