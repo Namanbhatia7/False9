@@ -91,7 +91,7 @@ app.get("/competitions/:name", function(req,res,){
     
     })
 
-app.get('/competitions/:name/teams', (req,res) =>{
+app.get('/:name/teams', (req,res) =>{
 
     let leaguecode = req.params.name;
     console.log(req.query)
@@ -120,7 +120,7 @@ app.get('/competitions/:name/teams', (req,res) =>{
 
 })
 
-app.get('/competitions/:name/standings', (req,res) =>{
+app.get('/:name/standings', (req,res) =>{
 
     let leaguecode = req.params.name;
     var options ={
