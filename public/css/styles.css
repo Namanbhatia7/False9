@@ -119,10 +119,11 @@ h2.section-heading {
 
 .container-fluid.comp-cards {
     
-    width: 100%;
-    background: #E44D2E;
+    width: 100%; 
     position: relative;
-    
+    background-color: #610000;
+    background-image: linear-gradient(1deg, #610000 0%, #ab0f16 33%, #a50707 66%, #ef6e6e 100%);
+   
     
 }
 
@@ -131,4 +132,43 @@ p.Comp-para {
     font-size: 2rem;
     padding: 101px;
     font-weight: 600;
+}
+
+
+
+
+/* LEAGUE PAGE */
+
+.leagueButton {
+    width: 100%;
+    height: 400px;
+    background-image: url('/img/LeaguePage/footballGround.jpg');
+}
+
+.leagueConatiner {
+    width: 100%;
+    height: 100%;
+    /* background: beige; */
+    z-index: 2;
+    background: rgba(39,62,84,0.82);
+}
+
+.dropdown-menu {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
 }
