@@ -8,19 +8,18 @@
     <%- include('partials/navbar')-%>
      
 
-    <div class="dropdown">
+    <div class="dropdown pc-page">
         <button class="btn btn-secondary dropdown-toggle leagueButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <!-- <img src="/img/LeaguePage/footballGround.jpg" alt=""> -->
             <div class="leagueConatiner">
-                <p class="leagueName"><%= displayData.name %></p>
-                <p>Area: <%= displayData.area.name %></p><br>
-        </div>
-
+                <p><%= displayData.name %></p>
+                <p><%= displayData.area.name %></p><br> 
+            </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="/<%= displayData.code %>/teams">All Teams</a>
-          <a class="dropdown-item" href="/<%= displayData.code %>/standings">Standings</a>
-          <a class="dropdown-item" href="/<%= displayData.code %>/scorers">Top Scorers</a>
+          <a class="dropdown-item pc-card teams-card" href="/<%= displayData.code %>/teams"><div>Teams</div></a>
+          <a class="dropdown-item pc-card standings-card" href="/<%= displayData.code %>/standings"><div>Standings</div></a>
+          <a class="dropdown-item pc-card scorers-card" href="/<%= displayData.code %>/scorers"><div>Top Scorers</div></a>
         </div>
       </div>
 
