@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <%- include('partials/head') -%>
+  <title>Teams</title>
 </head>
+
 <body>
+  <%- include('partials/navbar') -%> 
 
-   <% for(let i=0; i<no; i++){ %>
-   <%    if(disData.competition.plan === "TIER_ONE"){ %>
-
-           <a href="<%= disData.teams[i].name %>/<%= disData.teams[i].tla %>" role="button" id=" <%= disData.teams[i].tla %> " ><br> <%= disData.teams[i].name %> </a>
-        <% } %>
+  
+  <div class="team-container">
+  <% for(let i=0; i<no; i++){ %>
+    
+    <%    if(disData.competition.plan === "TIER_ONE"){ %>
+      
+    <div class="card team-card" style="width: 30rem;">
+      <div class="row team-row">
+        <div class="col-sm-5">
+          <img class="card-img-top crest" src="<%= disData.teams[i].crestUrl %>" alt="Card image cap">
+        </div>
+      <div class="card-body col-sm-7">
+        <h5 class="card-title team-name"><%= disData.teams[i].name %></h5>
+        <a href="<%= disData.teams[i].name %>/<%= disData.teams[i].tla %>"  class="btn btn-primary team-button">Explore</a>
+      </div>
+    </div>
+  </div>
   <% } %>
+  <% } %>
+</div>
+
 </body>
+
 </html>

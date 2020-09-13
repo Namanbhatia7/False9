@@ -261,3 +261,45 @@ a.dropdown-item.pc-card div {
     padding-left: 40px;
     padding-top: 21px;
 }
+
+/* Team ejs */
+
+.team-container {
+    margin: 95px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+
+.card.team-card {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.card.team-card:nth-child(odd) {
+    /* margin-left: 47rem; */
+    margin-right: 12rem;
+}
+
+img.card-img-top.crest {
+    max-height: 120px;
+    margin: 1rem;
+    margin-left: 0;
+}
+
+a.btn.btn-primary.team-button {
+    position: relative;
+    top: 28px;
+}
+
+.card-body.col-sm-7 {
+    text-align: center;
+}
+
+h5.card-title.team-name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.team-row{
+    background-image: -webkit-linear-gradient(132deg, rgb(245 13 13 / 40%) 30%, #ffffff 50%);
+}
