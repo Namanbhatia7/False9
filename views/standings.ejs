@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <%- include('partials/head') -%>
+    <title>Standings</title>
 </head>
 <body>
-
-  <table>
+  <%- include('partials/navbar') -%>
+  <div class="table-responsive">
+  <table class="table table-hover table-dark">
     <thead>
       <tr>
-        <th>Teams</th>
+        <th></th>
+        <th>TEAMS</th>
         <th>P</th>
         <th>W</th>
         <th>D</th>
@@ -24,7 +25,8 @@
     <tbody>
       <% for(let i=0;i<totalTeams;i++){ %>
                  <tr>
-                   <td><%= displayData.standings[0].table[i].team.name %></td>
+                   <td><%= i+1  %></td>
+                   <td> <img class="table-icons" src="<%= displayData.standings[0].table[i].team.crestUrl %>"> <%= displayData.standings[0].table[i].team.name %></td>
                    <td><%= displayData.standings[0].table[i].playedGames %></td>
                    <td><%= displayData.standings[0].table[i].won %></td>
                    <td><%= displayData.standings[0].table[i].draw %></td>
@@ -37,6 +39,8 @@
 
       <% } %>
     </tbody>
+    </table>
+    </div>
 
 </body>
 </html>
