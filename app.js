@@ -152,7 +152,7 @@ app.get('/:name/standings', (req,res) =>{
 
 })
 
-app.get('/competitions/:name/scorers', (req,res) =>{
+app.get('/:name/scorers', (req,res) =>{
 
     let leaguecode = req.params.name;
     console.log(req.query)
