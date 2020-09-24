@@ -367,3 +367,11 @@ h5.card-title.team-name {
  thead {
     font-size: 1.25rem;
 }
+
+tbody tr:nth-child(-n+4) {
+    background: #71d474a1;
+}
+
+tbody tr:nth-last-child(-n+3) {
+    background: #d47171a1;
+}
