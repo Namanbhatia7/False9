@@ -22,7 +22,7 @@
         <th>Pts</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="standing-table">
       <% for(let i=0;i<totalTeams;i++){ %>
                  <tr>
                    <td><%= i+1  %></td>
@@ -40,7 +40,12 @@
       <% } %>
     </tbody>
     </table>
+    <div class="container-fluid table-classification">
+      <h2 class="table-title">Qualification/Relegation</h2>
+      <span id="cl-qualify" class="zone"></span><p class="table-zone">Champions League</p><br>
+      <span id="uel-qualify" class="zone"></span><p class="table-zone">Europa League</p><br>
+      <span id="relegation" class="zone"></span><p class="table-zone">Relegation</p><br>
     </div>
-
+    </div>
 </body>
 </html>
