@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('partials/head')-%>
-    <title>Leagues & Competitions</title>
+  <%- include('partials/head')-%>
+  <title>Leagues & Competitions</title>
 </head>
+
 <body>
   <%- include('partials/navbar')-%>
 
- 
+
   <div class="container-fluid heading">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -83,7 +85,7 @@
             <h5>Manchester United</h5>
           </div>
         </div>
- 
+
 
       </div>
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -95,39 +97,43 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    
+
   </div>
 
-  <div class="container-fluid comp-info"> 
-    <p class="Comp-para">False9 currently cover 12 prestigious competiton around the Globe that includes All the top leagues of Europe, Brazil and FIFA World Cup.  </p>
+  <div class="container-fluid comp-info">
+    <p class="Comp-para">False9 currently cover 12 prestigious competiton around the Globe that includes All the top
+      leagues of Europe, Brazil and FIFA World Cup. </p>
 
 
   </div>
 
   <div class="skewed-bg">
-  <div class="container-fluid comp-cards">
-  <div class="row">
-   <% for(let i=0; i<noOfComp; i++){ %>
-   <%    if(displayData.competitions[i].plan === "TIER_ONE"){ %>
-          <div class="col-sm-4">
-        <div class="card w-50">
-          <img class="card-img-top" src="/img/LeagueEmblems/<%= displayData.competitions[i].code %>.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><%= displayData.competitions[i].name %></h5>
-            <p class="card-text"><%= displayData.competitions[i].area.name %></p>
-            <a href="competitions/<%= displayData.competitions[i].code %>" role="button" class="btn btn-primary" id=" <%= displayData.competitions[i].code %> " >View Teams  </a>
+    <div class="container-fluid comp-cards">
+      <div class="row">
+        <% for(let i=0; i<noOfComp; i++){ %>
+        <%    if(displayData.competitions[i].plan === "TIER_ONE"){ %>
+        <div class="col-sm-4">
+          <div class="card">
+            <img class="card-img-top" src="/img/LeagueEmblems/<%= displayData.competitions[i].code %>.png"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= displayData.competitions[i].name %></h5>
+              <p class="card-text"><%= displayData.competitions[i].area.name %></p>
+              <a href="competitions/<%= displayData.competitions[i].code %>" role="button" class="btn"
+                id=" <%= displayData.competitions[i].code %> ">View Teams </a>
+            </div>
           </div>
         </div>
-      </div>  
-      
-     
+
+
         <% } %>
-  <% } %>
-</div>
-</div>
-</div>
-<script type="text/javascript">
-$('.carousel').carousel()
-</script>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $('.carousel').carousel()
+  </script>
 </body>
+
 </html>
