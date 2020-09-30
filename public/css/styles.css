@@ -375,3 +375,44 @@ tbody tr:nth-child(-n+4) {
 tbody tr:nth-last-child(-n+3) {
     background: #d47171a1;
 }
+
+span.zone {
+    height: 12px;
+    width: 36px;
+    background: black;
+    display: inline-flex;
+    margin-right: 1.5rem;
+}
+
+p.table-zone {
+    display: inline-block;
+    margin-right: 1rem;  
+}
+
+.container-fluid.table-classification {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background: #4646466e;
+    width: auto;
+    margin-block-end: 1rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+}
+
+h2.table-title {
+    font-weight: 600;
+    margin-block-end: 1rem;
+}
+
+span#cl-qualify {
+    background: #00d016;
+}
+
+span#uel-qualify {
+    background: #0053d0;
+}
+
+span#relegation {
+    background: #d03a00;
+}
