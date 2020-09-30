@@ -47,15 +47,13 @@ body {
 }
 
 .navbar {
-
-    /* background: #69ADA5;
+    background: #69ADA5;
     background: -webkit-linear-gradient(top, #69ADA5, #28ADA7);
     background: -moz-linear-gradient(top, #69ADA5, #28ADA7); */
     /* background: linear-gradient(to bottom, #69ADA5, #28ADA7); */
     /* background: linear-gradient(to bottom, #151716, #4c4a4ac2);      */
     background: #020202db;
     height: 61px;
-
 }
 
 .nav-link {
@@ -63,7 +61,6 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-
 }
 
 .navbar-brand {
@@ -71,7 +68,8 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 1.7rem;
-} 
+
+}
 
 /* Competitions */
 
@@ -192,8 +190,11 @@ h2.section-heading {
 .container-fluid.comp-cards {
     width: 100%;
     position: relative;
-    background: rgb(236, 25, 25);
-    background: radial-gradient(circle, rgba(236, 25, 25, 1) 0%, rgba(168, 18, 27, 1) 89%);
+    background-color: #610000;
+    background: #EF233C;
+    background: -webkit-linear-gradient(top left, #EF233C, #BD2037);
+    background: -moz-linear-gradient(top left, #EF233C, #BD2037);
+    background: linear-gradient(to bottom right, #EF233C, #BD2037);
 }
 
 p.Comp-para {
@@ -202,6 +203,7 @@ p.Comp-para {
     padding: 10%;
     font-weight: 600;
 }
+
 
 @media (max-width: 767.98px) {
     p.Comp-para {
@@ -337,13 +339,15 @@ a.dropdown-item.pc-card div {
 
 .card.team-card {
     display: inline-block;
+    width: 45%;
     margin-bottom: 2rem;
+    margin-right: 4%;
 }
 
-.card.team-card:nth-child(odd) {
-    /* margin-left: 47rem; */
+/* .card.team-card:nth-child(odd) {
+     margin-left: 47rem;
     margin-right: 12rem;
-}
+} */
 
 img.card-img-top.crest {
     max-height: 120px;
@@ -360,12 +364,33 @@ a.btn.btn-primary.team-button {
 }
 
 h5.card-title.team-name {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
+@media (max-width:800px) {
+    .card.team-card {
+        width: 80%;
+    }
+    h5.card-title.team-name {
+        font-size: 1rem;
+    }
+
+}
+
 .team-row {
-    background-image: -webkit-linear-gradient(132deg, #B61924 0%, #ffffff 50%);
+    /* background-image: -webkit-linear-gradient(132deg, #B61924 0%, #ffffff 50%); */
+    background: rgb(255, 255, 255);
+    background: linear-gradient(124deg, rgba(255, 255, 255, 1) 50%, rgba(227, 54, 54, 1) 100%);
+}
+
+.team-button {
+    background-color: #212529;
+    border: none;
+}
+
+.team-button:hover {
+    background-color: #484848;
 }
 
 /* #B61924 */
