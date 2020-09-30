@@ -49,9 +49,9 @@ body {
 
 .navbar {
 
-    background: #69ADA5;
+    /* background: #69ADA5;
     background: -webkit-linear-gradient(top, #69ADA5, #28ADA7);
-    background: -moz-linear-gradient(top, #69ADA5, #28ADA7);
+    background: -moz-linear-gradient(top, #69ADA5, #28ADA7); */
     /* background: linear-gradient(to bottom, #69ADA5, #28ADA7); */
     /* background: linear-gradient(to bottom, #151716, #4c4a4ac2);      */
     background: #020202db;
@@ -59,16 +59,16 @@ body {
 
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: rgb(255 255 255);
+.nav-link {
+    /* color: rgb(255 255 255); */
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
     font-weight: 400;
 
 }
 
-.navbar-light .navbar-brand {
-    color: rgb(255 255 255);
+.navbar-brand {
+    /* color: rgb(255 255 255); */
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 1.7rem;
