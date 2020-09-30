@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,29 +11,112 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./public/css/home.css">
+
     <title>False9</title>
 </head>
+
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">False9</a>
+        <div class="ml-lg-5">
+            <img src="./public/img/logo.png" alt="">
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="nav navbar-nav ml-auto">
-            <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="/competitions">Leagues & Competitions</a>
-            <a class="nav-link" href="#">Matches</a>
-          </div>
+        <div class="mr-lg-5 collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="nav navbar-nav ml-auto">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/competitions">Leagues & Competitions</a>
+                <a class="nav-link" href="#">Matches</a>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-      <div class="container-fluid">
-        <h2>Welcome to False9</h2>
+    <div class="hero">
+        <img src="./public/img/ucl.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-sm-block d-md-block ">
+            <div class="text-center text-black">
+                <img id="logo" src="./public/img/logo2.png" alt="">
+                <h1>Welcome to False9</h1>
+                <div class="description justify-content-center">
+                    <h5>For Your Latest football Score Updates, Competitions and Player Stats, League Standings and much more.</h5>
+                </div>
+            </div>
+            <div id="cta" class="m-auto">Matches</div>
+        </div>
+    </div>
+
+    <main>
+        <div class="row m-5 justify-content-center">
+            <div class="col-lg-4 col-md-10 m-2 col-sm-12 mr-lg-5">
+                <h1>What's different about False9</h1>
+                <p>False9 provides all the functionality to teep you up tp date with Latest football Score Updates, Competitions and Player Stats, League Standings and much more.</p>
+            </div>
+            <div class="col-lg-6 col-md-10 col-sm-12 ml-lg-5  pl-lg-5">
+                <img style="width: 100%;" src="./public/img/LeaguePage/unnamed.jpg" alt="">
+            </div>
+        </div>
 
 
-      </div>
-    
-        
+        <div id="carouselExampleSlidesOnly" class="carousel slide mt-lg-5 mb-lg-5" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <img id="emblem" src="./public/img/LeagueEmblems/EC.png" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/PPL.png" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/DED.gif" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/BL.gif" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/brazil-serie-a.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img id="emblem" src="./public/img/LeagueEmblems/CL.png" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/DED.png" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/ELC.png" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/FIFA-World-Cup.jpg" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/ligue1.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <img id="emblem" src="./public/img/LeagueEmblems/PD.png" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/PL.png" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/PPL.gif" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/SA.png" class="d-block w-100" alt="...">
+                        <img id="emblem" src="./public/img/LeagueEmblems/WC.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-12 text-center">
+                <img id="footer-img" src="./public/img/logo.png" alt="">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12 feet text-center">
+                <img src="./public/img/icons/icon-facebook.svg" alt="">
+                <img src="./public/img/icons/icon-youtube.svg" alt="">
+                <img src="./public/img/icons/icon-twitter.svg" alt="">
+                <img src="./public/img/icons/icon-instagram.svg" alt="">
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12 mt-lg-5 mt-md-5 text-center">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/competitions">Leagues & Competitions</a>
+                <a class="nav-link" href="#">Matches</a>
+            </div>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>
