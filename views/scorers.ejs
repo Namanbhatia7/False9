@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head')-%>
+  
     <title>Top Scorers</title>
 </head>
 <body>
-    
+    <%- include('partials/navbar')-%>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Player</th>
+            <th scope="col">Team</th>
+            <th scope="col">Position</th>
+            <th scope="col">Goals</th>
+          </tr>
+        </thead>
+ 
+        <tbody>
     <% for(let i=0; i<topScorers; i++){ %>
-        <div>
-            <p><%= displayData.scorers[i].player.name %></p>
-            <p><%= displayData.scorers[i].team.name %></p>
-            <p><%= displayData.scorers[i].numberOfGoals %></p>
-        </div>
-                     
+              
+              <tr>
+                <td><%= i+1  %></td>
+                <td><%= displayData.scorers[i].player.name %></td>
+                <td><%= displayData.scorers[i].team.name %></td>
+                <td><%= displayData.scorers[i].player.position %></td>
+                <td><%= displayData.scorers[i].numberOfGoals %></td>
+              </tr>
+                       
      <% } %>
+    </tbody>
+</table>
 
 
 </body>

@@ -14,7 +14,7 @@ cd False9
 
 - Now terminal will be inside False9 directory. Run the following commands to install prerequisites:
 ```
-npm install request express body-parser
+npm install
 ```
 
 - After succesfully installing required modules in above command, run 

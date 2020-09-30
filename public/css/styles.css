@@ -49,25 +49,26 @@ body {
 .navbar {
     background: #69ADA5;
     background: -webkit-linear-gradient(top, #69ADA5, #28ADA7);
-    background: -moz-linear-gradient(top, #69ADA5, #28ADA7);
+    background: -moz-linear-gradient(top, #69ADA5, #28ADA7); */
     /* background: linear-gradient(to bottom, #69ADA5, #28ADA7); */
     /* background: linear-gradient(to bottom, #151716, #4c4a4ac2);      */
     background: #020202db;
     height: 61px;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: rgb(255 255 255);
+.nav-link {
+    /* color: rgb(255 255 255); */
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
     font-weight: 400;
 }
 
-.navbar-light .navbar-brand {
+.navbar-brand {
     color: rgb(255 255 255);
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 1.7rem;
+
 }
 
 /* Competitions */
@@ -79,20 +80,52 @@ body {
     padding-left: 4rem;
 }
 
-.btn-primary {
+.btn {
     color: #fff;
-    background-color: #484848;
-    border: solid 2.5px #e44d2e;
+    /* border: solid 2.5px #e44d2e; */
+    background-color: #52575d;
     border-radius: 15px 15px 15px 0;
 }
 
-.card.w-50 {
-    border: solid 2px #000000;
+.btn:hover {
+    background-color: #838383;
+    color: white;
+}
+
+.card {
+    border: none;
+    width: 50%;
     left: 4rem;
-    -webkit-box-shadow: -10px 8px 16px -18px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -10px 8px 16px -18px rgba(0, 0, 0, 0.75);
-    box-shadow: -10px 8px 16px -18px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px -1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px -1px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px -1px 5px 0px rgba(0, 0, 0, 0.75);
     border-radius: 0 0 27px 0;
+}
+
+.card-title {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 100%;
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: 80%;
+        left: 0;
+    }
+    .card-title {
+        font-size: 90%;
+    }
+    .card-text {
+        font-size: 90%;
+    }
+    .btn {
+        padding: 6%;
+        font-size: 85%;
+    }
 }
 
 .container-fluid.heading {
@@ -150,7 +183,6 @@ h2.section-heading {
 
 .container-fluid.comp-info {
     background: #fdfdfd;
-    min-height: 300px;
     width: 100%;
     position: relative;
 }
@@ -168,8 +200,16 @@ h2.section-heading {
 p.Comp-para {
     text-align: center;
     font-size: 2rem;
-    padding: 101px;
+    padding: 10%;
     font-weight: 600;
+}
+
+
+@media (max-width: 767.98px) {
+    p.Comp-para {
+        font-size: 1.3rem;
+        padding: 4%;
+    }
 }
 
 /* LEAGUE PAGE */
@@ -367,10 +407,51 @@ thead {
     font-size: 1.25rem;
 }
 
-tbody tr:nth-child(-n+4) {
+tbody.standing-table tr:nth-child(-n+4) {
     background: #71d474a1;
 }
 
-tbody tr:nth-last-child(-n+3) {
+tbody.standing-table tr:nth-last-child(-n+3) {
     background: #d47171a1;
+}
+
+span.zone {
+    height: 12px;
+    width: 36px;
+    background: black;
+    display: inline-flex;
+    margin-right: 1.5rem;
+}
+
+p.table-zone {
+    display: inline-block;
+    margin-right: 1rem;  
+}
+
+.container-fluid.table-classification {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background: #4646466e;
+    width: auto;
+    margin-block-end: 1rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+}
+
+h2.table-title {
+    font-weight: 600;
+    margin-block-end: 1rem;
+}
+
+span#cl-qualify {
+    background: #00d016;
+}
+
+span#uel-qualify {
+    background: #0053d0;
+}
+
+span#relegation {
+    background: #d03a00;
 }
