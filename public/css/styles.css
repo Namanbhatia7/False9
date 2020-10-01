@@ -48,12 +48,11 @@ body {
 
 .navbar {
     background: #69ADA5;
-    background: -webkit-linear-gradient(top, #69ADA5, #28ADA7);
-    background: -moz-linear-gradient(top, #69ADA5, #28ADA7); */
+    background-image: linear-gradient(90deg,#28ADA7,#69ADA5);
     /* background: linear-gradient(to bottom, #69ADA5, #28ADA7); */
     /* background: linear-gradient(to bottom, #151716, #4c4a4ac2);      */
-    background: #020202db;
     height: 61px;
+
 }
 
 .nav-link {
@@ -68,6 +67,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 1.7rem;
+    text-shadow: 1px 1px #4c4a4ac2;
 
 }
 
@@ -425,7 +425,7 @@ span.zone {
 
 p.table-zone {
     display: inline-block;
-    margin-right: 1rem;  
+    margin-right: 1rem;
 }
 
 .container-fluid.table-classification {
