@@ -1,9 +1,11 @@
 //jshint esversion:6
 
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const ejs = require('ejs');
+
 
 const app = express();
 
@@ -16,7 +18,7 @@ app.get("/", (req,res) => {
     
 });
 
-var apiKey = 'f24e3d3915fd4ee5a88568138ff0c652';
+var apiKey = process.env.API_KEY;
 app.get("/competitions", function(req,res,){
 
 var options ={
@@ -76,6 +78,7 @@ app.get("/competitions/:name", function(req,res,){
     
         var dataset = JSON.parse(body);
         var seasons = dataset.seasons;
+        console.log(dataset);
 
         var noOfSeasons = Object.keys(seasons).length;
         console.log(noOfSeasons);
@@ -85,6 +88,8 @@ app.get("/competitions/:name", function(req,res,){
                 seasonCount: noOfSeasons
 
             });
+
+            
                     
     })
     
