@@ -1,7 +1,10 @@
 The Site is under process of migrating from ejs templating to React front-end.
 
 # False9 (WORK IN PROGRESS)
-Latest football Score Updates, Competitions and Player Stats, League Standings and much more.
+
+# About
+Latest football Score Updates, Competitions and Player Stats, League Standings and much more.False9 fetches data from [Football-data.org](https://www.football-data.org/) API
+
 
 ## How to Run
 - You need to have a node.js installed in your system to run this project. Follow [this link](https://nodejs.org/en/download/) to download node.js
