@@ -1,0 +1,88 @@
+.navbar-wrapper{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: transparent;
+    width : 100%;
+    color: white;
+}
+.navbar-wrapper .nav-brand{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-left: 15px;
+    color: white;
+}
+.navbar-wrapper .nav-items{
+    display: flex;
+    font-family: 'Lato',sans-serif;
+    font-size: large;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 50px;
+    transition: font-size 200ms ease-in-out;
+}
+.navbar-wrapper .nav-items .per-item{
+    margin: 0px 10px 0px 10px;
+}
+
+.navbar-wrapper .nav-items .per-item::after{
+    content: '';
+    opacity: 0;
+    width: 0;
+    display: block;
+    border: 1px solid #FECD1A;
+    background-color: #FECD1A;
+    border-radius: 10px;
+    margin: 0px auto;
+    transition:  width 200ms ease-out;
+}
+.navbar-wrapper .nav-items .per-item:last-child{
+    margin-right: 15px;
+}
+.navbar-wrapper .nav-items .per-item:hover::after{
+    opacity: 1;
+    width: 100%;
+}
+
+.navbar-wrapper .nav-brand .nav-ham{
+    display: none;
+}
+
+/* media quaries */
+
+@media screen and (max-width : 780px){
+    .navbar-wrapper{
+        display: block;
+        width: 100%;
+    }
+    .navbar-wrapper .nav-items{
+        display: none;
+        margin: auto 15px;
+        
+        margin-top: 20px;
+        
+        
+    }
+    .navbar-wrapper .nav-items .per-item{
+        text-align: left;
+        margin-left: 0px;
+    }
+    .navbar-wrapper .nav-items.active{
+        display: block;
+
+    }
+    .navbar-wrapper .nav-brand{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 15px;
+    }
+    .navbar-wrapper .nav-brand .nav-ham{
+        display: block;
+        height: 0px;
+        cursor: pointer;
+    }
+}
