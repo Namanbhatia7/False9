@@ -78,7 +78,7 @@ app.get("/competitions/:name", function(req,res,){
     
         var dataset = JSON.parse(body);
         var seasons = dataset.seasons;
-        console.log(dataset);
+        console.log("dataset = ",dataset);
 
         var noOfSeasons = Object.keys(seasons).length;
         console.log(noOfSeasons);
