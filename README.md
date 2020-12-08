@@ -28,3 +28,13 @@ node app.js
 ```
 
 - Now open your web browser and type **http://localhost:3000/**
+
+## How to get API key and run it
+
+- Before you run the server, it's important you get your API key. To do that, go to [Football-data.org](https://www.football-data.org/) and get your **free API key**. 
+- Now create a file named **.env** in your folder. Inside the file, insert the following code
+
+```
+API_KEY = your API key
+```
+Doing this will fetch you all the data from the source and you'll be able to explore the full functionality. 

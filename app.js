@@ -3,15 +3,15 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const request = require('request');
 const ejs = require('ejs');
-
+const gameRoutes = require('./routes');
 
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
+
 
 app.get("/", (req,res) => {
     res.sendFile(`${__dirname}/index.html`);
@@ -78,7 +78,7 @@ app.get("/competitions/:name", function(req,res,){
     
         var dataset = JSON.parse(body);
         var seasons = dataset.seasons;
-        console.log("dataset = ",dataset);
+        console.log(dataset);
 
         var noOfSeasons = Object.keys(seasons).length;
         console.log(noOfSeasons);
@@ -185,6 +185,9 @@ app.get('/:name/scorers', (req,res) =>{
 
 
 })
+
+app.use(gameRoutes);
+
 
 app.listen(3000, function(){
     console.log("Server is Running on Port 3000");
