@@ -6,7 +6,11 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <span className="footer-text">© {date} made with React.Js</span>
+        <h6 className="footer-text">
+          Made using{" "}
+          <a href="https://www.football-data.org/">Football-Data.org's API</a>
+        </h6>
+        <h6 className="footer-text">&#169; {date}</h6>
       </div>
     </footer>
   );
