@@ -469,3 +469,21 @@ span#uel-qualify {
 span#relegation {
     background: #d03a00;
 }
+
+/* Top scorers */
+.top-scorers {
+    margin: 1.5rem auto 1rem;
+    background: #4646466e;
+    width: 90%;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+}
+
+table.top-scorers td {
+    border: none;
+}
+
+table.top-scorers th {
+    border-top: none;
+}
