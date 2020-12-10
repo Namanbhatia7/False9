@@ -5,9 +5,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: transparent;
+    background-color: #343A40;
     width : 100%;
     color: white;
+    z-index: 9999999;
+}
+.navbar-wrapper.back-transparent{
+    background-color:transparent;
 }
 .navbar-wrapper .nav-brand{
     font-family: 'Lato', sans-serif;
@@ -27,6 +31,8 @@
 }
 .navbar-wrapper .nav-items .per-item{
     margin: 0px 10px 0px 10px;
+    text-decoration: none;
+    color: white;
 }
 
 .navbar-wrapper .nav-items .per-item::after{
@@ -36,7 +42,7 @@
     display: block;
     border: 1px solid #FECD1A;
     background-color: #FECD1A;
-    border-radius: 10px;
+
     margin: 0px auto;
     transition:  width 200ms ease-out;
 }
@@ -70,10 +76,17 @@
     .navbar-wrapper .nav-items .per-item{
         text-align: left;
         margin-left: 0px;
+        margin-top:10px;
     }
     .navbar-wrapper .nav-items.active{
         display: block;
 
+    }
+    .navbar-wrapper .nav-items .per-item::after{
+        margin-bottom:10px;
+    }
+    .navbar-wrapper .nav-items .per-item:last-child{
+        margin-right: 0px;
     }
     .navbar-wrapper .nav-brand{
         display: flex;

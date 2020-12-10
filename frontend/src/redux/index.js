@@ -1,0 +1,1 @@
+export {fetchCompetitions} from './competition/competitionActions'
