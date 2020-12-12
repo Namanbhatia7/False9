@@ -13,6 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.use(gameRoutes);
 
-app.listen(3000, function () {
-  console.log("Server is Running on Port 3000");
+app.listen(4000, function () {
+  console.log("Server is Running on Port 4000");
 });
