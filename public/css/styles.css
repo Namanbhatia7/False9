@@ -55,6 +55,19 @@ img.iconset {
     height: 100%;
 }
 
+.row.footer-content {
+    justify-content: center;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.container-fluid.footer {
+    height: 20vh;
+    color: white;
+    vertical-align: middle;
+    background: linear-gradient(29deg, rgb(29 135 85) 0%, rgba(40, 99, 77, 1) 60%, rgb(78 20 89) 100%);
+}
+
 /* Competitions */
 
 .col-sm-4 {
