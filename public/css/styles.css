@@ -1,7 +1,6 @@
-
-body {
+html, body {
     font-family: 'Lato', sans-serif;
-    
+    height: 100%;
 }
 
 .navbar {
@@ -22,7 +21,6 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 1.7rem;
-
 }
 
 .container-fluid.home {
@@ -113,15 +111,12 @@ img.iconset {
         width: 80%;
         left: 0;
     }
-
     .card-title {
         font-size: 90%;
     }
-
     .card-text {
         font-size: 90%;
     }
-
     .btn {
         padding: 6%;
         font-size: 85%;
@@ -150,12 +145,7 @@ h2.section-heading {
     background: #8fffd9;
 }
 
-.container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl {
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
     width: 100%;
     padding-right: 0px;
     padding-left: 15px;
@@ -208,7 +198,6 @@ p.Comp-para {
     padding: 10%;
     font-weight: 600;
 }
-
 
 @media (max-width: 767.98px) {
     p.Comp-para {
@@ -377,11 +366,9 @@ h5.card-title.team-name {
     .card.team-card {
         width: 80%;
     }
-
     h5.card-title.team-name {
         font-size: 1rem;
     }
-
 }
 
 .team-row {
@@ -463,13 +450,27 @@ span#relegation {
 }
 
 /* Top scorers */
+
+.scorers {
+    height: 100%;
+    background: rgb(84, 7, 91);
+    background: linear-gradient(29deg, rgba(84, 7, 91, 1) 0%, rgba(40, 99, 77, 1) 60%, rgba(27, 139, 86, 1) 100%);
+}
+
 .top-scorers {
     margin: 1.5rem auto 1rem;
-    background: #4646466e;
-    width: 90%;
+    /* background: #4646466e; */
+    -webkit-box-shadow: 4px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    width: 80%;
     padding: 1rem;
     color: white;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
+}
+
+.table.top-scorers {
+    border-left: 7px solid #5aa469;
 }
 
 table.top-scorers td {
@@ -478,4 +479,11 @@ table.top-scorers td {
 
 table.top-scorers th {
     border-top: none;
+}
+
+.table.top-scorers tr:nth-child(even) {
+    background-color: rgb(217, 217, 217, 0.1);
+    -webkit-box-shadow: 0px 1px 9px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 9px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 9px -2px rgba(0, 0, 0, 0.75);
 }
