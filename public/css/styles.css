@@ -47,6 +47,7 @@ img.iconset {
 
 .container-fluid.testimony {
     height: 60vh;
+    background: #e2e2e2;
 }
 
 .row.facts {
@@ -64,6 +65,23 @@ img.iconset {
     color: white;
     vertical-align: middle;
     background: linear-gradient(29deg, rgb(29 135 85) 0%, rgba(40, 99, 77, 1) 60%, rgb(78 20 89) 100%);
+}
+
+p.feature-text {
+    font-size: 1.5rem;
+    font-family: 'Lato';
+    font-weight: 600;
+    padding: 2rem;
+}
+
+p.footer-text {
+    font-size: 1.25rem;
+}
+
+a.link {
+    font-size: 1.25rem;
+    color: deepskyblue;
+    font-weight: 600;
 }
 
 /* Competitions */
@@ -177,7 +195,7 @@ h2.section-heading {
 /* Skewed Background */
 
 .container-fluid.comp-info {
-    background: #fdfdfd;
+    background: #e2e2e2;
     width: 100%;
     position: relative;
 }
@@ -186,10 +204,7 @@ h2.section-heading {
     width: 100%;
     position: relative;
     background-color: #610000;
-    background: #EF233C;
-    background: -webkit-linear-gradient(top left, #EF233C, #BD2037);
-    background: -moz-linear-gradient(top left, #EF233C, #BD2037);
-    background: linear-gradient(to bottom right, #EF233C, #BD2037);
+    background: linear-gradient(29deg, rgba(84, 7, 91, 1) 0%, #ef233c 60%, #bd2037 100%);
 }
 
 p.Comp-para {
@@ -197,6 +212,7 @@ p.Comp-para {
     font-size: 2rem;
     padding: 10%;
     font-weight: 600;
+    margin: 0;
 }
 
 @media (max-width: 767.98px) {
