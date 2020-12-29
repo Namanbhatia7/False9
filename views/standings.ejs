@@ -23,21 +23,20 @@
       </tr>
     </thead>
     <tbody class="standing-table">
-      <% for(let i=0;i<totalTeams;i++){ %>
+      <% displayData.standings[0].table.forEach(function(content,index){ %>
                  <tr>
-                   <td><%= i+1  %></td>
-                   <td> <img class="table-icons" src="<%= displayData.standings[0].table[i].team.crestUrl %>"> <%= displayData.standings[0].table[i].team.name %></td>
-                   <td><%= displayData.standings[0].table[i].playedGames %></td>
-                   <td><%= displayData.standings[0].table[i].won %></td>
-                   <td><%= displayData.standings[0].table[i].draw %></td>
-                   <td><%= displayData.standings[0].table[i].lost %></td>
-                   <td><%= displayData.standings[0].table[i].goalsFor %></td>
-                   <td><%= displayData.standings[0].table[i].goalsAgainst %></td>
-                   <td><%= displayData.standings[0].table[i].goalDifference %></td>
-                   <td><%= displayData.standings[0].table[i].points %></td>
+                   <td><%= index+1  %></td>
+                   <td> <img class="table-icons" src="<%= content.team.crestUrl %>"> <%= content.team.name %></td>
+                   <td><%= content.playedGames %></td>
+                   <td><%= content.won %></td>
+                   <td><%= content.draw %></td>
+                   <td><%= content.lost %></td>
+                   <td><%= content.goalsFor %></td>
+                   <td><%= content.goalsAgainst %></td>
+                   <td><%= content.goalDifference %></td>
+                   <td><%= content.points %></td>
                  </tr>
-
-      <% } %>
+      <% }) %>
     </tbody>
     </table>
     <% if(displayData.competition.code!="CL" && displayData.competition.code!="WC"){ %>
