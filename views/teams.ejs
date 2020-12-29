@@ -11,22 +11,22 @@
 
   
   <div class="team-container">
-  <% for(let i=0; i<no; i++){ %>
+  
     
     <%    if(disData.competition.plan === "TIER_ONE"){ %>
-      
+      <% disData.teams.forEach(function(content){ %>
     <div class="card team-card">
       <div class="row team-row">
         <div class="col-sm-5">
-          <img class="card-img-top crest" src="<%= disData.teams[i].crestUrl %>" alt="Card image cap">
+          <img class="card-img-top crest" src="<%= content.crestUrl %>" alt="Card image cap">
         </div>
       <div class="card-body col-sm-7">
-        <h5 class="card-title team-name"><%= disData.teams[i].name %></h5>
-        <a href="<%= disData.teams[i].name %>/<%= disData.teams[i].tla %>"  class="btn btn-primary team-button">Explore</a>
+        <h5 class="card-title team-name"><%= content.name %></h5>
+        <a href="<%= content.name %>/<%= content.tla %>"  class="btn btn-primary team-button">Explore</a>
       </div>
     </div>
   </div>
-  <% } %>
+  <% }) %>
   <% } %>
 </div>
 

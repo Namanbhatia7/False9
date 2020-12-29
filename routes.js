@@ -133,9 +133,7 @@ router.get('/:name/standings', (req, res) => {
 
         var standingsData = JSON.parse(body);
         var standingCount = standingsData.standings[0].table;
-
         var noOfteams = Object.keys(standingCount).length;
-
         console.log(noOfteams);
 
         res.render("standings", {
