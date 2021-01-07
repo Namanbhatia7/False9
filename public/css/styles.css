@@ -96,7 +96,7 @@ a.link {
 .btn {
     color: #fff;
     /* border: solid 2.5px #e44d2e; */
-    background-color: #52575d;
+    background-color: #0b6959e6;
     border-radius: 15px 15px 15px 0;
 }
 
@@ -204,7 +204,8 @@ h2.section-heading {
     width: 100%;
     position: relative;
     background-color: #610000;
-    background: linear-gradient(29deg, rgba(84, 7, 91, 1) 0%, #ef233c 60%, #bd2037 100%);
+    /* background: linear-gradient(29deg, rgba(84, 7, 91, 1) 0%, #ef233c 60%, #bd2037 100%); */
+    background: linear-gradient(90deg, #149880 0%, rgba(151,40,168,1) 100%);
 }
 
 p.Comp-para {
@@ -391,12 +392,12 @@ h5.card-title.team-name {
         /* background-image: -webkit-linear-gradient(132deg, #B61924 0%, #ffffff 50%); */
         background: rgb(255, 255, 255);
         background: linear-gradient(124deg, rgba(255, 255, 255, 1) 50%, rgba(227, 54, 54, 1) 100%);
-        background: black;
+        background: #1b1616;
         color: whitesmoke;
 }
 
 .team-button {
-    background-color: #b50909;
+    background-color: #cb2c5f;
     border: none;
 }
 
@@ -405,8 +406,8 @@ h5.card-title.team-name {
 }
 
 body.team-body {
-    background: rgb(84, 7, 91);
-    background: linear-gradient(29deg, rgb(66 7 91) 0%, rgb(99 40 40) 60%, rgb(139 27 27) 100%);
+    background: rgb(204,43,94);
+    background: linear-gradient(90deg, rgba(204,43,94,1) 0%, rgba(117,58,136,1) 100%);
     background: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -484,9 +485,9 @@ span#relegation {
 .top-scorers {
     margin: 1.5rem auto 1rem;
     /* background: #4646466e; */
-    -webkit-box-shadow: 4px 4px 16px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 4px 4px 16px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 4px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 8px 8px 25px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 8px 25px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 8px 8px 25px 2px rgba(0, 0, 0, 0.75);
     width: 80%;
     padding: 1rem;
     color: white;
@@ -495,6 +496,8 @@ span#relegation {
 
 .table.top-scorers {
     border-left: 7px solid #5aa469;
+    position: relative;
+    transform: translate(10px, 85px);
 }
 
 table.top-scorers td {
