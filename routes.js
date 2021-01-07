@@ -70,39 +70,27 @@ router.get("/competitions/:name", function (req, res,) {
 
         var dataset = JSON.parse(body);
         var seasons = dataset.seasons;
-        console.log(dataset);
-
         var noOfSeasons = Object.keys(seasons).length;
-        console.log(noOfSeasons);
 
         res.render("particularcompetition", {
             displayData: dataset,
             seasonCount: noOfSeasons
 
         });
-
-
-
     })
-
-
 })
 
 router.get('/:name/teams', (req, res) => {
-
     let leaguecode = req.params.name;
-    console.log(req.query)
     var options = {
         url: "https://api.football-data.org/v2/competitions/" + leaguecode + '/teams',
         method: "GET",
         headers: {
             "X-Auth-Token": apiKey
         },
-
     };
 
     request(options, function (error, response, body) {
-
         var leagueData = JSON.parse(body);
         var allData = leagueData.count;
 
@@ -110,15 +98,10 @@ router.get('/:name/teams', (req, res) => {
             no: allData,
             disData: leagueData
         });
-
-
     })
-
-
 })
 
 router.get('/:name/standings', (req, res) => {
-
     let leaguecode = req.params.name;
     var options = {
         url: "https://api.football-data.org/v2/competitions/" + leaguecode + '/standings',
@@ -134,17 +117,11 @@ router.get('/:name/standings', (req, res) => {
         var standingsData = JSON.parse(body);
         var standingCount = standingsData.standings[0].table;
         var noOfteams = Object.keys(standingCount).length;
-        console.log(noOfteams);
-
         res.render("standings", {
             totalTeams: noOfteams,
             displayData: standingsData
         });
-
-
     })
-
-
 })
 
 router.get('/:name/scorers', (req, res) => {
@@ -157,11 +134,9 @@ router.get('/:name/scorers', (req, res) => {
         headers: {
             "X-Auth-Token": apiKey
         },
-
     };
 
     request(options, function (error, response, body) {
-
         var scorersData = JSON.parse(body);
         var count = scorersData.count;
 
@@ -169,15 +144,28 @@ router.get('/:name/scorers', (req, res) => {
             topScorers: count,
             displayData: scorersData
         });
-
-
     })
-
-
 })
 
+router.get('/teams/:code/:name', (req, res) => {
 
+    let teamCode = req.params.code;
+    console.log(req.query)
+    var options = {
+        url: "https://api.football-data.org/v2/teams/" + teamCode,
+        method: "GET",
+        headers: {
+            "X-Auth-Token": apiKey
+        },
+    };
 
-
+    request(options, function (error, response, body) {
+        var teamData = JSON.parse(body);
+        console.log(teamData);
+        res.render("particularTeam", {
+            teamData: teamData
+        });
+    })
+})
 
 module.exports = router;
