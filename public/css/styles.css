@@ -388,13 +388,15 @@ h5.card-title.team-name {
 }
 
 .team-row {
-    /* background-image: -webkit-linear-gradient(132deg, #B61924 0%, #ffffff 50%); */
-    background: rgb(255, 255, 255);
-    background: linear-gradient(124deg, rgba(255, 255, 255, 1) 50%, rgba(227, 54, 54, 1) 100%);
+        /* background-image: -webkit-linear-gradient(132deg, #B61924 0%, #ffffff 50%); */
+        background: rgb(255, 255, 255);
+        background: linear-gradient(124deg, rgba(255, 255, 255, 1) 50%, rgba(227, 54, 54, 1) 100%);
+        background: black;
+        color: whitesmoke;
 }
 
 .team-button {
-    background-color: #212529;
+    background-color: #b50909;
     border: none;
 }
 
@@ -402,7 +404,13 @@ h5.card-title.team-name {
     background-color: #484848;
 }
 
-/* #B61924 */
+body.team-body {
+    background: rgb(84, 7, 91);
+    background: linear-gradient(29deg, rgb(66 7 91) 0%, rgb(99 40 40) 60%, rgb(139 27 27) 100%);
+    background: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 /* STANDINGS */
 
