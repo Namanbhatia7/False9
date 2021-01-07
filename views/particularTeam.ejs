@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') -%>
+    <title><%= teamData.name %></title>
+</head>
+<body class="particular-team-body">
+    <%- include('partials/navbar') -%>
+    <div class="particular-team-container">
+        <div class="row">
+        <div class="col-sm-5 team-image">
+            <img class="card-img-top team-crest" src="<%= teamData.crestUrl %>" alt="<%= teamData.name %>">
+        </div>
+    </div>
+    </div>
+</body>
+</html>
