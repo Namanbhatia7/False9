@@ -517,19 +517,33 @@ table.top-scorers th {
 
 /* Particular Team */
 
-.particular-team-container {
+.particular-team {
     background: #1a1b1b;
-    height: 30rem;
-    margin: 2rem;
+    min-height: 30rem;
     position: relative;
     transform: translate(0%, 25%);
 }
 
 .team-crest {
-    height: 20rem;  
+    width: 50%; 
 }
 
-.team-image {
-    position: relative;
-    transform: translate(0px, -101px);
+.col-sm-6.team-info {
+    color: antiquewhite;
+    font-size: 1.25rem;
+}
+
+.col-sm-6.team-image {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.col-sm-6.team-info h1 {
+    font-size: 3.3rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+
+#squad{
+    display: none;
 }

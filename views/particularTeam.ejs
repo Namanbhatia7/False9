@@ -6,12 +6,28 @@
 </head>
 <body class="particular-team-body">
     <%- include('partials/navbar') -%>
-    <div class="particular-team-container">
+    <div class="particular-team container">
         <div class="row">
-        <div class="col-sm-5 team-image">
+        <div class="col-sm-6 team-image">
             <img class="card-img-top team-crest" src="<%= teamData.crestUrl %>" alt="<%= teamData.name %>">
         </div>
+        <div class="col-sm-6 team-info">
+            <h1><%= teamData.name %></h1>
+            <div>
+                <p>Address: <%= teamData.address %></p>
+                <p>Phone: <%= teamData.phone %></p>
+                <p>Website: <a href="<%= teamData.website %>"><%= teamData.website %></a></p>
+                <p>Email: <%= teamData.email %></p>
+                <p>Venue: <%= teamData.venue %></p>
+            </div>
+        </div>
     </div>
+    <div class="row">
+        <a role="button" href="#squad">View Squad</a>
+    </div>
+    </div>
+    <div id="squad" class="container">
+        <p>lorem ispum ispum tispum</p>
     </div>
 </body>
 </html>
