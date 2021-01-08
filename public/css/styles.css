@@ -544,6 +544,9 @@ table.top-scorers th {
     margin-top: 2rem;
 }
 
-#squad{
-    display: none;
+#squad {
+    display: block;
+    position: relative;
+    top: 8rem;
+    margin-top: 5rem;
 }

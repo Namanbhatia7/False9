@@ -27,7 +27,16 @@
     </div>
     </div>
     <div id="squad" class="container">
-        <p>lorem ispum ispum tispum</p>
+            <% teamData.squad.forEach(function(content){ %>   
+          <div class="card team-card">
+            <div class="row team-row">
+            <div class="card-body col-sm-12">
+              <h5 class="card-title team-name"><%= content.name %></h5>
+              <p><%= content.nationality %></p>
+            </div>
+          </div>
+        </div>
+        <% }) %>
     </div>
 </body>
 </html>
