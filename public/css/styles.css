@@ -519,7 +519,8 @@ table.top-scorers th {
 
 .particular-team {
     background: rgb(33,33,33);
-    background: linear-gradient(90deg, rgba(33,33,33,1) 50%, rgba(6,6,6,1) 50%);
+    /* background: linear-gradient(90deg, rgba(33,33,33,1) 50%, rgba(6,6,6,1) 50%); */
+    background: linear-gradient(90deg, rgba(33,33,33,1) -5%, #5b5e61 25%, rgba(6,6,6,1) 49%);
     min-height: 30rem;
     position: relative;
     transform: translate(0%, 25%);
@@ -527,7 +528,7 @@ table.top-scorers th {
 }
 
 .team-crest {
-    width: 50%; 
+    width: 80%;
 }
 
 .col-sm-6.team-info {
@@ -539,32 +540,39 @@ table.top-scorers th {
 
 .col-sm-6.team-image {
     text-align: center;
-    margin-top: 3rem;
+    margin: auto;
+    margin-top: 1.5rem;
 }
 
 .col-sm-6.team-info h1 {
     font-size: 3.3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     margin-top: 2rem;
+    color: #efb313
+}
+
+.col-sm-6.team-info p {
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
 }
 
 #squad {
-    display: block;
     position: relative;
     top: 8rem;
     margin-top: 5rem;
 }
 
-.row.button {
+.button {
     text-align: center;
     justify-content: center;
-    width: 75%;
+    width: 50%;
     margin: auto;
     padding: 0.35rem 0;
-    background: rgb(240,231,141);
-    background: linear-gradient(90deg, #ead364 49%, #d29e13 49%);
+    background: rgb(210,158,19);
+    background: linear-gradient(45deg, rgba(210,158,19,1) 27%, rgba(226,216,14,1) 100%);
     border-radius: 2rem 0rem 2rem 0rem;
     box-shadow: 3px 0px 19px -5px rgba(255,196,19,1);
+    margin-block-start: 2.5rem;
 }
 
 .button a {
@@ -572,4 +580,18 @@ table.top-scorers th {
     font-size: 1.5rem;
     font-weight: 800;
     font-family: 'Lato';
+}
+
+.pos.row {
+    background: rgb(210,158,19);
+    background: linear-gradient(45deg, rgba(210,158,19,1) 27%, rgba(226,216,14,1) 100%);
+    font-size: 1.25rem;
+    color: black;
+    font-weight: 700;
+    text-align: left;
+    padding-top: 0.25rem;
+}
+
+.pos.row p{
+    margin-bottom: 0.5rem;
 }
