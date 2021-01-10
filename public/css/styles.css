@@ -518,10 +518,12 @@ table.top-scorers th {
 /* Particular Team */
 
 .particular-team {
-    background: #1a1b1b;
+    background: rgb(33,33,33);
+    background: linear-gradient(90deg, rgba(33,33,33,1) 50%, rgba(6,6,6,1) 50%);
     min-height: 30rem;
     position: relative;
     transform: translate(0%, 25%);
+    border-radius: 0rem 2rem
 }
 
 .team-crest {
@@ -531,6 +533,8 @@ table.top-scorers th {
 .col-sm-6.team-info {
     color: antiquewhite;
     font-size: 1.25rem;
+    padding-left: 3rem;
+    margin-block-end: 1rem;
 }
 
 .col-sm-6.team-image {
@@ -549,4 +553,23 @@ table.top-scorers th {
     position: relative;
     top: 8rem;
     margin-top: 5rem;
+}
+
+.row.button {
+    text-align: center;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    padding: 0.35rem 0;
+    background: rgb(240,231,141);
+    background: linear-gradient(90deg, #ead364 49%, #d29e13 49%);
+    border-radius: 2rem 0rem 2rem 0rem;
+    box-shadow: 3px 0px 19px -5px rgba(255,196,19,1);
+}
+
+.button a {
+    color: #282b2d;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: 'Lato';
 }
