@@ -5,48 +5,75 @@
   <%- include('partials/head')-%>
 
     <title>Top Scorers</title>
+    <style media="screen">
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .column{
+        width:100%;
+        padding: 10px 10px;
+      }
+      .card{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4)
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+      }
+      h1{
+        color:#d4a03fd3;
+      }
+      p{
+        color:#e4551d;
+      }
+
+    </style>
 </head>
 
 <body>
   <div class="scorers">
     <%- include('partials/navbar')-%>
+      <div class="row">
 
-      <table class="table top-scorers">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Player</th>
-            <th scope="col">Team</th>
-            <th scope="col">Position</th>
-            <th scope="col">Goals</th>
-          </tr>
-        </thead>
+        <div class="column">
+          <div class="card">
+            <h1>#</h1>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <h3> <%= i+1 %></h3>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h1>Player</h1>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <h3><%= displayData.scorers[i].player.name %></h3>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h1>Team</h1>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <h3> <%= displayData.scorers[i].team.name %></h3>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h1>Position</h1>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <h3><%= displayData.scorers[i].player.position %></h3>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h1>Goals</h1>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <h3><%= displayData.scorers[i].numberOfGoals %></h3>
+          </div>
+        </div>
 
-        <tbody>
-          <% for(let i=0; i<topScorers; i++){ %>
-
-            <tr>
-              <td>
-                <%= i+1 %>
-              </td>
-              <td>
-                <%= displayData.scorers[i].player.name %>
-              </td>
-              <td>
-                <%= displayData.scorers[i].team.name %>
-              </td>
-              <td>
-                <%= displayData.scorers[i].player.position %>
-              </td>
-              <td>
-                <%= displayData.scorers[i].numberOfGoals %>
-              </td>
-            </tr>
-
-            <% } %>
-        </tbody>
-      </table>
-  </div>
+      </div>
 
 
 </body>
