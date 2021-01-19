@@ -5,6 +5,31 @@
   <%- include('partials/head')-%>
 
     <title>Top Scorers</title>
+    <style media="screen">
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .column{
+        width:100%;
+        padding: 10px 10px;
+      }
+      .card{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4)
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+      }
+      h1{
+        color:#d4a03fd3;
+      }
+      p{
+        color:#e4551d;
+      }
+
+    </style>
 </head>
 
 <body>
@@ -14,37 +39,37 @@
 
         <div class="column">
           <div class="card">
-            <h3>#</h3>
+            <h1>#</h1>
             <% for(let i=0; i<topScorers; i++){ %>
-            <p> <%= i+1 %></p>
+            <h3> <%= i+1 %></h3>
           </div>
         </div>
         <div class="column">
           <div class="card">
-            <h3>Player</h3>
+            <h1>Player</h1>
             <% for(let i=0; i<topScorers; i++){ %>
-            <p><%= displayData.scorers[i].player.name %></p>
+            <h3><%= displayData.scorers[i].player.name %></h3>
           </div>
         </div>
         <div class="column">
           <div class="card">
-            <h3>Team</h3>
+            <h1>Team</h1>
             <% for(let i=0; i<topScorers; i++){ %>
-            <p> <%= displayData.scorers[i].team.name %></p>
+            <h3> <%= displayData.scorers[i].team.name %></h3>
           </div>
         </div>
         <div class="column">
           <div class="card">
-            <h3>Position</h3>
+            <h1>Position</h1>
             <% for(let i=0; i<topScorers; i++){ %>
-            <p><%= displayData.scorers[i].player.position %></p>
+            <h3><%= displayData.scorers[i].player.position %></h3>
           </div>
         </div>
         <div class="column">
           <div class="card">
-            <h3>Goals</h3>
+            <h1>Goals</h1>
             <% for(let i=0; i<topScorers; i++){ %>
-            <p><%= displayData.scorers[i].numberOfGoals %></p>
+            <h3><%= displayData.scorers[i].numberOfGoals %></h3>
           </div>
         </div>
 
