@@ -1,5 +1,3 @@
-The Site is under process of migrating from ejs templating to React front-end.
-
 # False9 (WORK IN PROGRESS)
 
 # About
