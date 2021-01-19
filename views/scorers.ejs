@@ -10,43 +10,45 @@
 <body>
   <div class="scorers">
     <%- include('partials/navbar')-%>
+      <div class="row">
 
-      <table class="table top-scorers">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Player</th>
-            <th scope="col">Team</th>
-            <th scope="col">Position</th>
-            <th scope="col">Goals</th>
-          </tr>
-        </thead>
+        <div class="column">
+          <div class="card">
+            <h3>#</h3>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <p> <%= i+1 %></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Player</h3>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <p><%= displayData.scorers[i].player.name %></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Team</h3>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <p> <%= displayData.scorers[i].team.name %></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Position</h3>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <p><%= displayData.scorers[i].player.position %></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Goals</h3>
+            <% for(let i=0; i<topScorers; i++){ %>
+            <p><%= displayData.scorers[i].numberOfGoals %></p>
+          </div>
+        </div>
 
-        <tbody>
-          <% for(let i=0; i<topScorers; i++){ %>
-
-            <tr>
-              <td>
-                <%= i+1 %>
-              </td>
-              <td>
-                <%= displayData.scorers[i].player.name %>
-              </td>
-              <td>
-                <%= displayData.scorers[i].team.name %>
-              </td>
-              <td>
-                <%= displayData.scorers[i].player.position %>
-              </td>
-              <td>
-                <%= displayData.scorers[i].numberOfGoals %>
-              </td>
-            </tr>
-
-            <% } %>
-        </tbody>
-      </table>
-  </div>
+      </div>
 
 
 </body>
