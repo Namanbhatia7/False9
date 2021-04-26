@@ -13,12 +13,8 @@ router.get("/", (req, res) => {
 router.get("/competitions", function (req, res,) {
 
     var options = {
-        url: "https://api.football-data.org/v2/competitions/",
+        url: "https://www.thesportsdb.com/api/v1/json/1/all_leagues.php",
         method: "GET",
-        headers: {
-            "X-Auth-Token": apiKey
-        },
-
     };
 
     request(options, function (error, response, body) {
@@ -31,11 +27,20 @@ router.get("/competitions", function (req, res,) {
             console.log("SUCCESS");
         }
 
-        var dataset = JSON.parse(body);
-        var allData = dataset.count;
+        var data = JSON.parse(body);
+        var dataset = data.leagues;
+        // var allData = dataset.count;
 
+        // console.log(dataset.sports[0])
+
+        // var i;
+        // for (i = 0; i < dataset.sports.length; i++) {
+        //     if(dataset.sports[i].strSport === "Soccer"){
+        //         console.log(dataset.sports[i])
+        //     }
+        // }
+        
         res.render("competitions", {
-            noOfComp: allData,
             displayData: dataset
         });
 

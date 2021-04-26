@@ -110,17 +110,13 @@
   <div class="skewed-bg">
     <div class="container-fluid comp-cards">
       <div class="row">
-          <% displayData.competitions.forEach(function(content){ %>
-            <%    if(content.plan === "TIER_ONE"){ %>
+          <% displayData.forEach(function(content){ %>
+            <%    if(content.strSport === "Soccer"){ %>
         <div class="col-sm-4">
           <div class="card">
-            <img class="card-img-top" src="/img/LeagueEmblems/<%= content.code %>.png"
-              alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title"><%= content.name %></h5>
-              <p class="card-text"><%= content.area.name %></p>
-              <a href="competitions/<%= content.code %>" role="button" class="btn"
-                id=" <%= content.code %> ">View Teams </a>
+              <h5 class="card-title"><%= content.strLeague %></h5>
+              <a href="#" role="button" class="btn">View Teams </a>
             </div>
           </div>
         </div>
